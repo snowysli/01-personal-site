@@ -1,1 +1,150 @@
-/* Add you CSS here */
+/* Basic styles for your portfolio */
+
+/* Set a background color for the page */
+body {
+  background-color: #f0f0f0; /* Light gray */
+  font-family: Arial, sans-serif; /* Easy-to-read font */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Center the header text */
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #4a90e2; /* Blue background */
+  color: white;
+}
+
+/* Add spacing to sections */
+section {
+  background-color: white;
+  margin: 30px auto;      /* More space around sections */
+  padding: 30px;          /* More space inside sections */
+  max-width: 700px;       /* Wider sections */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow */
+}
+
+/* Style the section headings */
+h2 {
+  color: #4a90e2;
+}
+
+/* Style links */
+a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Add a footer style */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333; /* Dark background */
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Style for the navigation bar */
+/* Make the sidebar mostly hidden, but leave a small part visible on the left */
+/* The sidebar will slide out when you hover over it */
+
+/* Sidebar default: mostly hidden except 30px */
+nav {
+  position: fixed; /* Keep nav bar on the left side */
+  top: 0;
+  left: 0;
+  height: 100%; /* Full height */
+  width: 200px; /* Full width when open */
+  background-color: #333; /* Dark background */
+  padding-top: 30px;
+  /* Move sidebar left except for 30px */
+  transform: translateX(-170px);
+  transition: transform 0.3s;
+  z-index: 1000; /* Make sure it's above other content */
+}
+
+/* When you hover over the sidebar, slide it out */
+nav:hover {
+  transform: translateX(0);
+}
+
+/* Style the navigation links */
+nav ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0;
+}
+
+nav li {
+  margin: 20px 0;
+}
+
+nav a {
+  color: white; /* White text */
+  text-decoration: none; /* No underline */
+  font-size: 18px;
+  display: block;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth animation */
+}
+
+nav a:hover {
+  background-color: #4a90e2; /* Highlight on hover */
+  transform: scale(1.08);    /* Slightly enlarge the button */
+}
+
+/* Move main content to the right of the nav bar */
+.main-content {
+  margin-left: 40px; /* Only a little space since sidebar is mostly hidden */
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+
+/* When sidebar is hovered, push main content to the right */
+nav:hover ~ .main-content {
+  margin-left: 210px; /* Match sidebar width */
+}
+
+/* For the home page, use .full-header to cover the top (already provided in previous answers) */
+
+/* For other tabs, show the name in the top right corner */
+.top-right-name {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  z-index: 999;
+  background: none;
+  color: #4a90e2;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* Make the name pop out more when hovered */
+#snow-link {
+  transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+  display: inline-block;
+}
+
+#snow-link:hover {
+  transform: scale(1.25);
+  color: #ffd700;
+  text-shadow: 0 0 10px #fff, 0 0 20px #4a90e2;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  section {
+    margin: 10px;
+    padding: 10px;
+  }
+  header, footer {
+    padding: 15px;
+  }
+}

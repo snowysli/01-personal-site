@@ -2,44 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <title>Projects</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navigation bar on the left side -->
   <nav>
-    <!-- Navigation links to sections on the page -->
     <ul>
-      <!-- Added a Home button at the top of the navigation bar -->
       <li><a href="index.html">🏠 Home</a></li>
       <li><a href="about.html">😊 About Me</a></li>
       <li><a href="projects.html">💻 Projects</a></li>
     </ul>
   </nav>
-
-  <!-- Main content area -->
+  <!-- Name in the top right corner for non-home tabs -->
+  <div class="top-right-name">
+    <!-- Name is clickable and shows snow effect -->
+    <a href="index.html" id="snow-link" style="color: inherit; text-decoration: none;">
+      Qinglan Luo
+    </a>
+  </div>
   <div class="main-content">
-    <!-- Header section with your name -->
-    <header>
-      <!-- Make your name a link to the home page and add a snow effect when clicked -->
-      <h1>
-        <a href="index.html" id="snow-link" style="color: inherit; text-decoration: none;">
-          Qinglan Luo
-        </a>
-      </h1>
-    </header>
-
-    <!-- Home page welcome section -->
-    <section id="home">
-      <h2>Welcome!</h2>
-      <p>
-        Hi, I'm Qinglan, but I also go by Sherry. This is my portfolio website where you can learn more about me and see some of my projects.<br>
-        Use the sidebar to visit the About Me and Projects pages.<br>
-        Click my name above for a fun snow effect!
-      </p>
+    <section>
+      <h2>My Projects</h2>
+      <ul>
+        <li>
+          <strong>Project 1:</strong> My First Website
+        </li>
+        <li>
+          <strong>Project 2:</strong> Simple Portfolio Page
+        </li>
+      </ul>
     </section>
   </div>
-
   <!-- Snow effect script for beginners -->
   <script>
     // This script creates a simple snow effect when you click your name
@@ -87,11 +81,5 @@
       }, 5000);
     });
   </script>
-
-  <!-- Simple footer for the home page -->
-  <footer>
-    <!-- This is a simple footer for beginners -->
-    &copy; 2025 Qinglan Luo. All rights reserved.
-  </footer>
 </body>
 </html>

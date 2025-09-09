@@ -2,44 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <title>About Me</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navigation bar on the left side -->
   <nav>
-    <!-- Navigation links to sections on the page -->
     <ul>
-      <!-- Added a Home button at the top of the navigation bar -->
       <li><a href="index.html">🏠 Home</a></li>
       <li><a href="about.html">😊 About Me</a></li>
       <li><a href="projects.html">💻 Projects</a></li>
     </ul>
   </nav>
-
-  <!-- Main content area -->
+  <!-- Name in the top right corner for non-home tabs -->
+  <div class="top-right-name">
+    <!-- Name is clickable and shows snow effect -->
+    <a href="index.html" id="snow-link" style="color: inherit; text-decoration: none;">
+      Qinglan Luo
+    </a>
+  </div>
   <div class="main-content">
-    <!-- Header section with your name -->
-    <header>
-      <!-- Make your name a link to the home page and add a snow effect when clicked -->
-      <h1>
-        <a href="index.html" id="snow-link" style="color: inherit; text-decoration: none;">
-          Qinglan Luo
-        </a>
-      </h1>
-    </header>
-
-    <!-- Home page welcome section -->
-    <section id="home">
-      <h2>Welcome!</h2>
+    <section>
+      <h2>About Me</h2>
       <p>
-        Hi, I'm Qinglan, but I also go by Sherry. This is my portfolio website where you can learn more about me and see some of my projects.<br>
-        Use the sidebar to visit the About Me and Projects pages.<br>
-        Click my name above for a fun snow effect!
+        Hello! I am majoring in Computer Science at UofM.
       </p>
     </section>
   </div>
-
   <!-- Snow effect script for beginners -->
   <script>
     // This script creates a simple snow effect when you click your name
@@ -78,20 +67,14 @@
 
       // Create more snowflakes over a longer time
       for (let i = 0; i < 30; i++) {
-        setTimeout(createSnowflake, i * 150); // Spread out snowflakes
+        setTimeout(createSnowflake, i * 150); // Spread out snowflakesi * 150); // Spread out snowflakes
       }
 
-      // Go to home after a longer delay
+      // Go to home after a longer delay      // Go to home after a longer delay
       setTimeout(() => {
-        window.location.href = 'index.html';
+        window.location.href = 'index.html';href = 'index.html';
       }, 5000);
     });
-  </script>
-
-  <!-- Simple footer for the home page -->
-  <footer>
-    <!-- This is a simple footer for beginners -->
-    &copy; 2025 Qinglan Luo. All rights reserved.
-  </footer>
+  </script>ipt>
 </body>
 </html>

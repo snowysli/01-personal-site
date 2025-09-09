@@ -43,9 +43,9 @@ a:hover {
 /* Add a footer style */
 footer {
   position: fixed; /* Fix the footer to the bottom */
-  left: 0;
+  left: 200px;     /* Start the footer after the sidebar (sidebar is 200px wide) */
   bottom: 0;
-  width: 100%;
+  width: calc(100% - 200px); /* Footer takes up the rest of the page */
   background-color: #4a90e2; /* Match header/nav color */
   color: white;
   text-align: center;

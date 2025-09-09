@@ -42,13 +42,23 @@ a:hover {
 
 /* Add a footer style */
 footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #333; /* Dark background */
-  color: white;
-  position: relative;
+  position: fixed; /* Fix the footer to the bottom */
+  left: 0;
   bottom: 0;
   width: 100%;
+  background-color: #4a90e2; /* Match header/nav color */
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 1em;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s; /* Smooth hide/show */
+  z-index: 1000;
+}
+
+/* Hide the footer by moving it down */
+footer.hide-footer {
+  transform: translateY(100%);
 }
 
 /* Style for the navigation bar */

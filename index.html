@@ -89,9 +89,26 @@
   </script>
 
   <!-- Simple footer for the home page -->
-  <footer>
+  <footer id="main-footer">
     <!-- This is a simple footer for beginners -->
     &copy; 2025 Qinglan Luo. All rights reserved.
   </footer>
+
+  <script>
+    // Beginner-friendly script to hide footer when scrolling up
+    let lastScrollY = window.scrollY;
+    const footer = document.getElementById('main-footer');
+
+    window.addEventListener('scroll', function() {
+      // If scrolling up, hide the footer
+      if (window.scrollY < lastScrollY) {
+        footer.classList.add('hide-footer');
+      } else {
+        // If scrolling down, show the footer
+        footer.classList.remove('hide-footer');
+      }
+      lastScrollY = window.scrollY;
+    });
+  </script>
 </body>
 </html>

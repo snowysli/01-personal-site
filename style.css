@@ -3,10 +3,15 @@
 /* Set a background color for the page */
 body {
   background-color: #f0f0f0; /* Light gray */
-  font-family: Arial, sans-serif; /* Easy-to-read font */
+  font-family: Papyrus, Arial, sans-serif; /* Papyrus font style */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
+  background-image: url('img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 
 /* Center the header text */
 header {
@@ -72,7 +77,7 @@ nav {
   left: 0;
   height: 100%; /* Full height */
   width: 200px; /* Full width when open */
-  background-color: #333; /* Dark background */
+  background: linear-gradient(to bottom, #4a90e2, #8e44ad);
   padding-top: 30px;
   /* Move sidebar left except for 30px */
   transform: translateX(-170px);

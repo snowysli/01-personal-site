@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Resume</title>
+	<link rel="stylesheet" href="style.css">
+	<!-- Material Symbols for icons -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=docs" />
+</head>
+<body style="background: linear-gradient(135deg,#9f68b7); min-height:100vh;">
+	<!-- Navigation bar on the left side -->
+	<nav style="background:#6e3288;">
+		<!-- Navigation links to other pages -->
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="projects.html">About Me</a></li>
+				<li><a href="resume.html"><span class="material-symbols-outlined" style="vertical-align:middle; font-size:20px;">docs</span> Resume</a></li>
+		</ul>
+	</nav>
+	<section style="max-width:700px; margin:40px auto; background:#dfb2f2; border-radius:8px; box-shadow:0 2px 8px rgba(201, 25, 189, 0.12); padding:32px; text-align:center;">
+		<!-- Make the heading dark purple for better contrast -->
+		<h2 style="color:#3d0066;">My Resume</h2>
+		<!-- PDF viewer -->
+		<iframe src="resume.pdf" width="100%" height="500px" style="border-radius:8px; border:1px solid #eee;"></iframe>
+		<br>
+		<a href="resume.pdf" download
+            style="display:inline-block; margin-top:16px; padding:10px 24px; background:#7e24a5; color:#fff; border-radius:6px; text-decoration:none; transition: transform 0.2s, box-shadow 0.2s;"
+            onmouseover="this.style.transform='scale(1.12)'; this.style.boxShadow='0 4px 16px #7e24a577';"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';"
+        >
+            Download PDF
+        </a>
+	</section>
+</body>
+</html>

@@ -8,6 +8,7 @@
 <body>
   <!-- Navigation bar on the left side -->
   <nav>
+    <!-- Navigation links to other pages -->
     <ul>
       <li><a href="index.html">🏠 Home</a></li>
       <li><a href="about.html">😊 About Me</a></li>
@@ -25,10 +26,26 @@
     <section>
       <h2>About Me</h2>
       <p>
-        Hello! I am majoring in Computer Science at UofM.
+        Hello! I am majoring in Computer Science at UofM. I'm passionate about coding and technology. In my free time, I enjoy photography, video games, and chatting with friends.
       </p>
     </section>
   </div>
+  <!-- Simple footer text that stays at the bottom of the page -->
+  <div style="
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: none;
+    color: #4a90e2;
+    text-align: center;
+    font-size: 1em;
+    padding: 12px 0;
+    z-index: 1000;
+  ">
+    &copy; 2025 Qinglan Luo. All rights reserved.
+  </div>
+
   <!-- Snow effect script for beginners -->
   <script>
     // This script creates a simple snow effect when you click your name
@@ -67,14 +84,14 @@
 
       // Create more snowflakes over a longer time
       for (let i = 0; i < 30; i++) {
-        setTimeout(createSnowflake, i * 150); // Spread out snowflakesi * 150); // Spread out snowflakes
+        setTimeout(createSnowflake, i * 150); // Spread out snowflakes
       }
 
-      // Go to home after a longer delay      // Go to home after a longer delay
+      // Go to home after a longer delay
       setTimeout(() => {
-        window.location.href = 'index.html';href = 'index.html';
+        window.location.href = 'index.html';
       }, 5000);
     });
-  </script>ipt>
+  </script>
 </body>
 </html>

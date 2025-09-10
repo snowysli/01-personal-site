@@ -4,40 +4,110 @@
   <meta charset="UTF-8">
   <title>My Personal Site</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Animated glowing effect for the name button */
+    .glow-effect {
+      animation: glowColorChange 1s infinite alternate;
+      color: #ffd700;
+      text-shadow: 0 0 10px #fff, 0 0 20px #ffd700;
+      transition: color 0.3s, text-shadow 0.3s;
+    }
+
+    /* Keyframes for color-changing glow */
+    @keyframes glowColorChange {
+      0% { 
+        color: #ffd700;
+        text-shadow: 0 0 10px #fff, 0 0 20px #ffd700;
+      }
+      33% {
+        color: #4a90e2;
+        text-shadow: 0 0 10px #fff, 0 0 20px #4a90e2;
+      }
+      66% {
+        color: #ff69b4;
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff69b4;
+      }
+      100% {
+        color: #ffd700;
+        text-shadow: 0 0 10px #fff, 0 0 20px #ffd700;
+      }
+    }
+
+    /* Beginner-friendly: Add an aesthetic anime wallpaper to the name bar at the top */
+    /* This sets a background image for the header bar.
+       You can change the URL to any anime wallpaper you like. */
+    .full-header {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      
+      background-size: cover;      /* Make the image cover the whole header */
+      background-position: center; /* Center the image */
+      color: white;
+      text-align: center;
+      padding: 30px 0 20px 0;      /* Space above and below the name */
+      z-index: 999;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    /* Make sure the name stands out on the image */
+    .full-header h1 a {
+      background: rgba(0,0,0,0.4); /* Slight dark background for readability */
+      padding: 10px 30px;
+      border-radius: 8px;
+      color: #ffd700;
+      text-decoration: none;
+      font-size: 2em;
+      transition: color 0.3s;
+    }
+
+    .full-header h1 a:hover {
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation bar on the left side -->
   <nav>
-    <!-- Navigation links to sections on the page -->
+    <!-- Navigation links to other pages -->
     <ul>
-      <!-- Added a Home button at the top of the navigation bar -->
       <li><a href="index.html">🏠 Home</a></li>
       <li><a href="about.html">😊 About Me</a></li>
       <li><a href="projects.html">💻 Projects</a></li>
     </ul>
   </nav>
-
-  <!-- Main content area -->
+  <!-- Name bar covers the whole top part for the home page -->
+  <header class="full-header">
+    <h1>
+      <!-- Added a class for easier styling -->
+      <a href="index.html" id="snow-link" class="name-link" style="color: inherit; text-decoration: none;">
+        Qinglan Luo
+      </a>
+    </h1>
+  </header>
   <div class="main-content">
-    <!-- Header section with your name -->
-    <header>
-      <!-- Make your name a link to the home page and add a snow effect when clicked -->
-      <h1>
-        <a href="index.html" id="snow-link" style="color: inherit; text-decoration: none;">
-          Qinglan Luo
-        </a>
-      </h1>
-    </header>
-
-    <!-- Home page welcome section -->
     <section id="home">
-      <h2>Welcome!</h2>
+      <h2>Welcome to My Personal Site!</h2>
       <p>
-        Hi, I'm Qinglan, but I also go by Sherry. This is my portfolio website where you can learn more about me and see some of my projects.<br>
-        Use the sidebar to visit the About Me and Projects pages.<br>
-        Click my name above for a fun snow effect!
+        Hi, I'm Qinglan Luo. This is my portfolio website where you can learn more about me and see some of my projects.
       </p>
     </section>
+  </div>
+  <!-- Simple footer text that stays at the bottom of the page -->
+  <div style="
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: none;
+    color: #4a90e2;
+    text-align: center;
+    font-size: 1em;
+    padding: 12px 0;
+    z-index: 1000;
+  ">
+    &copy; 2025 Qinglan Luo. All rights reserved.
   </div>
 
   <!-- Snow effect script for beginners -->
@@ -72,42 +142,23 @@
       }, 4100); // Longer duration
     }
 
-    // When you click your name, make it snow!
+    // When you click your name, make it snow and keep glowing until snow ends
     snowLink.addEventListener('click', function(event) {
       event.preventDefault();
+
+      // Add the glowing effect with color animation
+      snowLink.classList.add('glow-effect');
 
       // Create more snowflakes over a longer time
       for (let i = 0; i < 30; i++) {
         setTimeout(createSnowflake, i * 150); // Spread out snowflakes
       }
 
-      // Go to home after a longer delay
+      // Remove the glowing effect after snow is done
       setTimeout(() => {
+        snowLink.classList.remove('glow-effect');
         window.location.href = 'index.html';
       }, 5000);
-    });
-  </script>
-
-  <!-- Simple footer for the home page -->
-  <footer id="main-footer">
-    <!-- This is a simple footer for beginners -->
-    &copy; 2025 Qinglan Luo. All rights reserved.
-  </footer>
-
-  <script>
-    // Beginner-friendly script to hide footer when scrolling up
-    let lastScrollY = window.scrollY;
-    const footer = document.getElementById('main-footer');
-
-    window.addEventListener('scroll', function() {
-      // If scrolling up, hide the footer
-      if (window.scrollY < lastScrollY) {
-        footer.classList.add('hide-footer');
-      } else {
-        // If scrolling down, show the footer
-        footer.classList.remove('hide-footer');
-      }
-      lastScrollY = window.scrollY;
     });
   </script>
 </body>

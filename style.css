@@ -136,16 +136,48 @@ nav:hover ~ .main-content {
   font-weight: bold;
 }
 
-/* Make the name pop out more when hovered */
-#snow-link {
-  transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+/* Beginner-friendly: Change name button color when mouse is hovering */
+#snow-link,
+.name-link {
+  transition: color 0.3s; /* Smooth color change */
   display: inline-block;
 }
 
-#snow-link:hover {
-  transform: scale(1.25);
-  color: #ffd700;
-  text-shadow: 0 0 10px #fff, 0 0 20px #4a90e2;
+/* Change color when hovered */
+#snow-link:hover,
+.name-link:hover {
+  color: #ffd700; /* Gold color on hover */
+}
+
+/* Light up effect when pressed (active) */
+#snow-link:active,
+.name-link:active {
+  color: #ffd700; /* Keep gold color */
+  text-shadow: 0 0 10px #fff, 0 0 20px #ffd700; /* Simple glow effect */
+}
+
+/* Add a class for the glowing effect */
+.glow-effect {
+  color: #ffd700; /* Start with gold */
+  text-shadow: 0 0 10px #fff, 0 0 20px #ffd700;
+  transition: color 0.3s, text-shadow 0.3s;
+  animation: glowColorChange 1s infinite alternate;
+}
+
+/* Simple animation to change glow color */
+@keyframes glowColorChange {
+  0% {
+    color: #ffd700;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ffd700;
+  }
+  50% {
+    color: #4a90e2;
+    text-shadow: 0 0 10px #fff, 0 0 20px #4a90e2;
+  }
+  100% {
+    color: #ff69b4;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff69b4;
+  }
 }
 
 /* Responsive design for smaller screens */

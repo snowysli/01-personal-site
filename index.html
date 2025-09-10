@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <title>My Personal Site</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Material Symbols for cottage icon (home) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=cottage" />
+  <!-- Material Symbols for person icon -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=person" />
   <style>
     /* Animated glowing effect for the name button */
     .glow-effect {
@@ -72,25 +78,56 @@
   <nav>
     <!-- Navigation links to other pages -->
     <ul>
-      <li><a href="index.html">🏠 Home</a></li>
-      <li><a href="about.html">😊 About Me</a></li>
-      <li><a href="projects.html">💻 Projects</a></li>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="projects.html"><span class="material-symbols-outlined">person</span> About Me</a></li>
     </ul>
   </nav>
-  <!-- Name bar covers the whole top part for the home page -->
-  <header class="full-header">
-    <h1>
-      <!-- Added a class for easier styling -->
-      <a href="index.html" id="snow-link" class="name-link" style="color: inherit; text-decoration: none;">
+  <!-- Name at the top center, no bar or box -->
+  <!-- Cloud shape around the name button -->
+  <div style="display:flex; justify-content:center; margin-top:24px;">
+    <div class="cloud-shape">
+      <a href="index.html" id="snow-link" class="name-link" style="color: #4a90e2; font-size:2em; font-weight:bold; text-decoration:none; background:none; border:none; box-shadow:none;">
         Qinglan Luo
       </a>
-    </h1>
-  </header>
+    </div>
+  </div>
+  <!-- Add cloud shape styles for the name button -->
+  <style>
+    /* Simple cloud shape using circles */
+    .cloud-shape {
+      display: inline-block;
+      background: #fff;
+      border-radius: 50px;
+      box-shadow: 0 4px 16px rgba(74,144,226,0.15);
+      padding: 18px 40px 18px 40px;
+      position: relative;
+    }
+    .cloud-shape::before,
+    .cloud-shape::after {
+      content: '';
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(74,144,226,0.10);
+    }
+    .cloud-shape::before {
+      width: 40px;
+      height: 40px;
+      left: -28px;
+      top: 10px;
+    }
+    .cloud-shape::after {
+      width: 32px;
+      height: 32px;
+      right: -22px;
+      top: 22px;
+    }
+  </style>
   <div class="main-content">
     <section id="home">
-      <h2>Welcome to My Personal Site!</h2>
+  <h2 style="text-align:center;">Welcome to My Personal Site!</h2>
       <p>
-        Hi, I'm Qinglan Luo. This is my portfolio website where you can learn more about me and see some of my projects.
+        Hi, I'm Qinglan Luo. This is my portfolio website where you can learn more about me and see some of my projects. Feel free to explore and click around for surprises!
       </p>
     </section>
   </div>

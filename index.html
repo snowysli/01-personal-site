@@ -6,11 +6,22 @@
   <link rel="stylesheet" href="style.css">
   <!-- Font Awesome CDN for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <!-- Material Symbols for cottage icon (home) -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=cottage" />
+  <!-- Material Symbols for house icon (home) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=house" />
   <!-- Material Symbols for person icon -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=person" />
+  <!-- Material Symbols for connect_without_contact icon (Connect tab) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=connect_without_contact" />
   <style>
+    /* Beginner-friendly: Style for Material Symbols icons */
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 200,
+        'GRAD' 0,
+        'opsz' 24;
+    }
+
     /* Animated glowing effect for the name button */
     .glow-effect {
       animation: glowColorChange 1s infinite alternate;
@@ -78,8 +89,9 @@
   <nav>
     <!-- Navigation links to other pages -->
     <ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="projects.html"><span class="material-symbols-outlined">person</span> About Me</a></li>
+  <li><a href="index.html"><i class="fa-solid fa-house" style="vertical-align:middle; font-size:20px;"></i> Home</a></li>
+  <li><a href="projects.html">About Me</a></li>
+  <li><a href="resume.html">Resume</a></li>
     </ul>
   </nav>
   <!-- Name at the top center, no bar or box -->
@@ -124,13 +136,28 @@
     }
   </style>
   <div class="main-content">
-    <section id="home">
-  <h2 style="text-align:center;">Welcome to My Personal Site!</h2>
+    <section id="home" style="width: 100%; max-width: 500px; margin: 0 auto; background: rgba(255,255,255,0.85); border-radius: 16px; box-shadow: 0 2px 8px rgba(74,144,226,0.12); padding: 40px 32px; text-align: center;">
+      <h2 style="text-align:center;">Welcome!</h2>
       <p>
         Hi, I'm Qinglan Luo. This is my portfolio website where you can learn more about me and see some of my projects. Feel free to explore and click around for surprises!
       </p>
     </section>
+<style>
+  /* Move the welcome text box down for better spacing */
+  #home {
+    margin-top: 60px;
+  }
+</style>
+    </section>
   </div>
+<style>
+  .main-content {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
   <!-- Simple footer text that stays at the bottom of the page -->
   <div style="
     position: fixed;
